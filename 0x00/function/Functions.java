@@ -2,9 +2,10 @@ public class Functions {
 
 
     // Faça somente 1 coisa
-    //A
-    public void saveCash(Income income, Expense expense){
+    public void saveIncome(Income income){
         inRepo.save(income);
+    }
+    public void saveExpense(Expense expense){
         outRepo.save(expense);
     }
 
@@ -16,11 +17,10 @@ public class Functions {
     }
 
     // Arguments
-    //A
-    public void saveUser(User user){};
+    //B
+    public void saveUser(String userName, User user, Date date, boolean isAdmin){};
 
     //  No side effects
-
     //B
     public User saveUser(User user){
         return userRepository.save(user);
@@ -42,3 +42,4 @@ public class Functions {
     }
 
 }
+
